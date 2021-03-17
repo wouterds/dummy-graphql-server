@@ -1,0 +1,6 @@
+type Person {
+  insz: String!
+  firstName: String
+  lastName: String
+  email: String
+}

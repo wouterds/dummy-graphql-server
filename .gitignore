@@ -1,0 +1,10 @@
+.vscode/
+.docker/data/
+.docker/data
+node_modules/
+dist/
+.DS_Store
+.env
+yarn-error.log
+.build-*
+data/

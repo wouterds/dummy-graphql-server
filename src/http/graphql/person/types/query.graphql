@@ -1,0 +1,4 @@
+type Query {
+  person(insz: String!): Person
+  persons(limit: Int): [Person!]!
+}
