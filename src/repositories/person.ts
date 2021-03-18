@@ -1,10 +1,16 @@
 import faker from 'faker';
 
+import OrganizationRepository from './organization';
+
 type Person = {
   insz: string;
   firstName: string;
   lastName: string;
   email: string;
+  organization?: Promise<{
+    vat: string;
+    name: string;
+  }>;
 };
 
 type PersonOptional = Partial<Person>;
@@ -28,6 +34,9 @@ const personFactory = (override?: PersonOptional): Person => {
     firstName,
     lastName,
     email,
+    get organization() {
+      return OrganizationRepository.getRandom();
+    },
   };
 };
 

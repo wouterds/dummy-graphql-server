@@ -26,6 +26,12 @@ const organizationFactory = (override?: OrganizationOptional): Organization => {
 };
 
 const OrganizationRepository = {
+  getRandom: async (): Promise<Organization> => {
+    console.log('[OrganizationRepository getRandom]');
+
+    return organizationFactory();
+  },
+
   getByVat: async (vat: string): Promise<Organization> => {
     console.log(`[OrganizationRepository getByVat] ${vat}`);
 
