@@ -1,0 +1,4 @@
+type Query {
+  organization(vat: String!): Organization
+  organizations(limit: Int): [Organization!]!
+}

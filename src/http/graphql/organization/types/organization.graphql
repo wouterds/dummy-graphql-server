@@ -1,0 +1,4 @@
+type Organization {
+  vat: String!
+  name: String!
+}
